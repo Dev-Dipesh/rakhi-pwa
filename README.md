@@ -2,6 +2,19 @@
 
 A beautiful Progressive Web App for the Rakhi (Raksha Bandhan) festival that creates a fun gift-giving experience between brothers and sisters.
 
+🔗 **Live Demo**: [https://rakhi-pwa.vercel.app/](https://rakhi-pwa.vercel.app/)
+
+## Screenshots
+
+### Setup Screen
+![Setup Screen](img/setupscreen.png)
+
+### Play Screen
+![Play Screen](img/playscreen.png)
+
+### Congratulations Screen
+![Congratulations Screen](img/congratulations.png)
+
 ## Features
 
 - **Gift Selection Game**: Brother sets min/max amounts, sister selects from 3 surprise envelopes
