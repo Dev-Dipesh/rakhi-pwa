@@ -25,8 +25,8 @@ interface GiftProviderProps {
 
 export function GiftProvider({ children }: GiftProviderProps) {
   const [mode, setMode] = useState<'setup' | 'play'>('setup');
-  const [minAmount, setMinAmount] = useState<number>(1);
-  const [maxAmount, setMaxAmount] = useState<number>(101);
+  const [minAmount, setMinAmount] = useState<number>(100);
+  const [maxAmount, setMaxAmount] = useState<number>(1000);
   const [envelopeAmounts, setEnvelopeAmounts] = useState<number[]>([]);
   const [selectedEnvelope, setSelectedEnvelope] = useState<number | null>(null);
   const [revealedAmount, setRevealedAmount] = useState<number | null>(null);

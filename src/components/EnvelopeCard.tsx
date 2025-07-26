@@ -68,7 +68,7 @@ export default function EnvelopeCard({
         {/* Envelope Body - rectangular base */}
         <motion.div
           className={cn(
-            "relative w-28 h-20 sm:w-36 sm:h-24 rounded-lg",
+            "relative w-32 h-20 sm:w-40 sm:h-24 rounded-lg",
             style.envelope,
             `${style.shadow} shadow-lg`,
             disabled && !isSelected ? "opacity-50" : "",
@@ -80,7 +80,7 @@ export default function EnvelopeCard({
           {/* Back triangular flap - diamond shape rotated 45deg */}
           <div 
             className={cn(
-              "absolute w-12 h-12 sm:w-16 sm:h-16 rotate-45 rounded-tl-lg -top-6 sm:-top-8 left-1/2 -translate-x-1/2",
+              "absolute w-14 h-14 sm:w-18 sm:h-18 rotate-45 rounded-tl-lg -top-7 sm:-top-9 left-1/2 -translate-x-1/2",
               style.envelope
             )}
           />
@@ -129,33 +129,9 @@ export default function EnvelopeCard({
           </motion.div>
         </motion.div>
         
-        {/* Front triangular flaps */}
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 z-10">
-          {/* Left triangle */}
-          <div 
-            className={cn(
-              "absolute w-0 h-0 -left-9",
-              "border-r-[18px] border-r-transparent",
-              "border-t-[12px] border-t-transparent", 
-              "border-b-[12px] border-b-transparent",
-              style.flap.replace('border-', 'border-l-[18px] border-l-')
-            )}
-          />
-          {/* Right triangle */}
-          <div 
-            className={cn(
-              "absolute w-0 h-0 -right-9",
-              "border-l-[18px] border-l-transparent",
-              "border-t-[12px] border-t-transparent",
-              "border-b-[12px] border-b-transparent", 
-              style.flap.replace('border-', 'border-r-[18px] border-r-')
-            )}
-          />
-        </div>
-        
-        {/* Shadow under envelope */}
+        {/* Shadow under envelope - positioned relative to envelope body */}
         <motion.div 
-          className="absolute -bottom-1 left-1/2 -translate-x-1/2 w-32 h-3 bg-black/20 rounded-full blur-sm"
+          className="absolute -bottom-4 left-0 right-0 flex justify-center"
           animate={{
             scaleX: [1, 0.85, 1],
           }}
@@ -165,7 +141,9 @@ export default function EnvelopeCard({
             ease: "easeInOut",
             delay: index * 0.1
           }}
-        />
+        >
+          <div className="w-24 sm:w-32 h-2 sm:h-3 bg-black/20 rounded-full blur-sm" />
+        </motion.div>
       </div>
 
       {/* Indicator dot */}
