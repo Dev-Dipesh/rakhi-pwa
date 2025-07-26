@@ -18,3 +18,16 @@ body {
   height: 100%;
   position: relative;
 }
+
+/* Allow orientation changes */
+@media screen and (orientation: landscape) {
+  body {
+    height: 100vh;
+  }
+}
+
+@media screen and (orientation: portrait) {
+  body {
+    height: 100vh;
+  }
+}
