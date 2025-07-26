@@ -85,10 +85,66 @@ The built files will be in the `dist` directory, ready for deployment.
 
 ## PWA Features
 
-- Responsive design optimized for mobile
-- Fast loading with Vite's optimization
-- Clean, professional interface
-- Smooth animations and transitions
+- **Installable**: Add to home screen on mobile devices
+- **Offline Support**: Service worker for basic offline functionality
+- **App-like Experience**: Standalone display mode
+- **Custom Icons**: High-quality SVG and PNG icons
+- **Responsive Design**: Optimized for mobile devices
+- **Fast Loading**: Vite optimization and caching
+- **Professional Interface**: Clean, modern design
+- **Smooth Animations**: Fluid transitions and effects
+
+### PWA Installation
+
+The app can be installed on mobile devices:
+1. **Android Chrome**: Look for "Add to Home Screen" prompt or menu option
+2. **iOS Safari**: Use "Add to Home Screen" from share menu
+3. **Desktop**: Install button may appear in address bar
+
+### PWA Icons
+
+The app uses multiple icon formats for best compatibility:
+- `public/icon.svg` - Vector icon (scalable)
+- `public/icon-192.png` - 192x192 PNG for Android
+- `public/icon-512.png` - 512x512 PNG for larger displays
+
+#### Updating PWA Icons
+
+If you modify the SVG icon (`public/icon.svg`), you'll need to regenerate the PNG versions:
+
+**Method 1: Using Node.js with sharp**
+```bash
+# Install sharp for high-quality image conversion
+npm install -g sharp-cli
+
+# Generate PNG icons from SVG
+sharp -i public/icon.svg -o public/icon-192.png --resize 192
+sharp -i public/icon.svg -o public/icon-512.png --resize 512
+```
+
+**Method 2: Using ImageMagick**
+```bash
+# Install ImageMagick (macOS)
+brew install imagemagick
+
+# Generate PNG icons
+convert public/icon.svg -resize 192x192 public/icon-192.png
+convert public/icon.svg -resize 512x512 public/icon-512.png
+```
+
+**Method 3: Using Inkscape**
+```bash
+# Install Inkscape (macOS)
+brew install inkscape
+
+# Generate PNG icons
+inkscape public/icon.svg --export-png=public/icon-192.png --export-width=192 --export-height=192
+inkscape public/icon.svg --export-png=public/icon-512.png --export-width=512 --export-height=512
+```
+
+**Method 4: Online Tools**
+- Use [Convertio](https://convertio.co/svg-png/) or similar online converters
+- Upload the SVG and download at 192x192 and 512x512 sizes
 
 ## Gift Amount Logic
 

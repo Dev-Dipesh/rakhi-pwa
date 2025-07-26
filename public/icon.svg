@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <!-- Background Circle -->
+  <circle cx="256" cy="256" r="240" fill="#fef7ed" stroke="#ef4444" stroke-width="8"/>
+  
+  <!-- Gift Box Base -->
+  <rect x="180" y="280" width="152" height="120" rx="8" fill="#ef4444"/>
+  <rect x="188" y="288" width="136" height="104" rx="4" fill="#dc2626"/>
+  
+  <!-- Gift Box Ribbon Vertical -->
+  <rect x="240" y="280" width="32" height="120" fill="#ec4899"/>
+  <rect x="244" y="284" width="24" height="112" fill="#be185d"/>
+  
+  <!-- Gift Box Ribbon Horizontal -->
+  <rect x="180" y="320" width="152" height="32" fill="#ec4899"/>
+  <rect x="184" y="324" width="144" height="24" fill="#be185d"/>
+  
+  <!-- Bow on Top -->
+  <ellipse cx="235" cy="275" rx="20" ry="12" fill="#ec4899"/>
+  <ellipse cx="277" cy="275" rx="20" ry="12" fill="#ec4899"/>
+  <circle cx="256" cy="275" r="8" fill="#be185d"/>
+  
+  <!-- Heart Above Gift -->
+  <g transform="translate(256, 220)">
+    <path d="M0,8 C-6,-4 -20,-4 -20,8 C-20,20 0,32 0,32 C0,32 20,20 20,8 C20,-4 6,-4 0,8 Z" fill="#ef4444"/>
+    <path d="M0,6 C-5,-3 -16,-3 -16,6 C-16,16 0,26 0,26 C0,26 16,16 16,6 C16,-3 5,-3 0,6 Z" fill="#f87171"/>
+  </g>
+  
+  <!-- Decorative Hearts -->
+  <g transform="translate(320, 180) scale(0.6)">
+    <path d="M0,8 C-6,-4 -20,-4 -20,8 C-20,20 0,32 0,32 C0,32 20,20 20,8 C20,-4 6,-4 0,8 Z" fill="#fbbf24"/>
+  </g>
+  
+  <g transform="translate(190, 170) scale(0.5)">
+    <path d="M0,8 C-6,-4 -20,-4 -20,8 C-20,20 0,32 0,32 C0,32 20,20 20,8 C20,-4 6,-4 0,8 Z" fill="#fbbf24"/>
+  </g>
+  
+  <!-- Sparkles -->
+  <g fill="#fbbf24">
+    <circle cx="350" cy="300" r="3"/>
+    <circle cx="160" cy="320" r="2"/>
+    <circle cx="380" cy="240" r="2.5"/>
+    <circle cx="150" cy="240" r="2"/>
+  </g>
+  
+  <!-- Small decorative stars -->
+  <g fill="#f59e0b" stroke="#f59e0b" stroke-width="1">
+    <path d="M340,350 L342,354 L346,354 L343,357 L344,361 L340,359 L336,361 L337,357 L334,354 L338,354 Z"/>
+    <path d="M170,380 L171.5,383 L174.5,383 L172.25,385 L173,388 L170,386.5 L167,388 L167.75,385 L165.5,383 L168.5,383 Z"/>
+  </g>
+</svg>
