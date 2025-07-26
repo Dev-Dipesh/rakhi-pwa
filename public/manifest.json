@@ -1,0 +1,19 @@
+{
+  "name": "Rakhi Gift PWA",
+  "short_name": "Rakhi Gift",
+  "description": "A playful gifting experience for Raksha Bandhan festival",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#dc2626",
+  "orientation": "portrait",
+  "categories": ["entertainment", "games"],
+  "lang": "en",
+  "icons": [
+    {
+      "src": "/vite.svg",
+      "sizes": "32x32",
+      "type": "image/svg+xml"
+    }
+  ]
+}
