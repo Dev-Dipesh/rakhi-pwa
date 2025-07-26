@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { motion } from 'motion/react';
 
 interface ConfettiPiece {
@@ -71,12 +71,12 @@ export default function Confetti({ isActive, duration = 3000 }: ConfettiProps) {
           initial={{
             x: piece.x,
             y: piece.y,
-            rotation: piece.rotation,
+            rotate: piece.rotation,
             scale: 1,
           }}
           animate={{
             y: window.innerHeight + 100,
-            rotation: piece.rotation + 720,
+            rotate: piece.rotation + 720,
             scale: 0.8,
           }}
           transition={{

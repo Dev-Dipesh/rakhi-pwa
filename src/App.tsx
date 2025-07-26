@@ -1,4 +1,3 @@
-import React from 'react';
 import { GiftProvider, useGift } from './context/GiftContext';
 import SetupScreen from './pages/SetupScreen';
 import PlayScreen from './pages/PlayScreen';

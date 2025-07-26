@@ -1,4 +1,3 @@
-import React from 'react';
 import { Play, Heart, Sparkles, Gift } from 'lucide-react';
 import { motion } from 'motion/react';
 import { useGift } from '../context/GiftContext';
@@ -16,7 +15,7 @@ export default function SetupScreen() {
 
   const isValid = minAmount > 0 && maxAmount > 0 && minAmount <= maxAmount;
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     if (isValid) {
       startGame();

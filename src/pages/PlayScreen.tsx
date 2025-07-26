@@ -1,4 +1,3 @@
-import React from 'react';
 import { X, RotateCcw, Sparkles, Heart } from 'lucide-react';
 import { motion } from 'motion/react';
 import { useGift } from '../context/GiftContext';
