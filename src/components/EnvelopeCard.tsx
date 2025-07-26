@@ -68,7 +68,7 @@ export default function EnvelopeCard({
         {/* Envelope Body - rectangular base */}
         <motion.div
           className={cn(
-            "relative w-36 h-24 rounded-lg",
+            "relative w-28 h-20 sm:w-36 sm:h-24 rounded-lg",
             style.envelope,
             `${style.shadow} shadow-lg`,
             disabled && !isSelected ? "opacity-50" : "",
@@ -80,16 +80,16 @@ export default function EnvelopeCard({
           {/* Back triangular flap - diamond shape rotated 45deg */}
           <div 
             className={cn(
-              "absolute w-16 h-16 rotate-45 rounded-tl-lg -top-8 left-1/2 -translate-x-1/2",
+              "absolute w-12 h-12 sm:w-16 sm:h-16 rotate-45 rounded-tl-lg -top-6 sm:-top-8 left-1/2 -translate-x-1/2",
               style.envelope
             )}
           />
           
           {/* Card inside envelope */}
           <motion.div
-            className="absolute inset-3 bg-white rounded-md shadow-inner border border-gray-200 flex flex-col items-center justify-center overflow-visible"
+            className="absolute inset-2 sm:inset-3 bg-white rounded-md shadow-inner border border-gray-200 flex flex-col items-center justify-center overflow-visible"
             animate={{
-              y: isRevealed ? -32 : 0
+              y: isRevealed ? -24 : 0
             }}
             transition={{ duration: 1, ease: "easeOut" }}
           >
@@ -99,13 +99,13 @@ export default function EnvelopeCard({
             {!isRevealed ? (
               // Unopened card content
               <div className="text-center z-10">
-                <div className="text-lg font-bold text-gray-800 mb-1">
+                <div className="text-sm sm:text-lg font-bold text-gray-800 mb-1">
                   Gift
                 </div>
-                <div className="w-6 h-6 bg-red-500 mx-auto relative">
+                <div className="w-4 h-4 sm:w-6 sm:h-6 bg-red-500 mx-auto relative">
                   {/* CSS Heart shape */}
-                  <div className="absolute w-6 h-6 bg-red-500 rotate-45 rounded-tl-full rounded-tr-none rounded-bl-none rounded-br-full" />
-                  <div className="absolute w-6 h-6 bg-red-500 -right-3 rotate-45 rounded-tl-none rounded-tr-full rounded-bl-full rounded-br-none" />
+                  <div className="absolute w-4 h-4 sm:w-6 sm:h-6 bg-red-500 rotate-45 rounded-tl-full rounded-tr-none rounded-bl-none rounded-br-full" />
+                  <div className="absolute w-4 h-4 sm:w-6 sm:h-6 bg-red-500 -right-2 sm:-right-3 rotate-45 rounded-tl-none rounded-tr-full rounded-bl-full rounded-br-none" />
                 </div>
               </div>
             ) : (
@@ -116,7 +116,7 @@ export default function EnvelopeCard({
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.6, delay: 0.5 }}
               >
-                <div className="text-xl font-bold text-red-600 mb-1">
+                <div className="text-lg sm:text-xl font-bold text-red-600 mb-1">
                   ₹{amount}
                 </div>
                 <div className="flex items-center justify-center gap-1">
